@@ -29,3 +29,10 @@ elements.forEach((el) => observer.observe(el));
 document.querySelectorAll('.teaser, .service-item, .case-study, .book-item').forEach((item) => {
     item.classList.add('hidden');
 });
+// Loading Screen
+window.addEventListener('load', () => {
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.style.display = 'none';
+});
+
+

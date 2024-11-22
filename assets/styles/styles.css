@@ -427,3 +427,44 @@ button::before, .cta-button::before {
 button:hover::before, .cta-button:hover::before {
     transform: translate(-50%, -50%) scale(1);
 }
+/* Carousel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 2rem auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #00509e;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}

@@ -47,5 +47,56 @@ navLinks.forEach(link => {
         });
     });
 });
+// Testimonials Carousel
+const track = document.querySelector('.carousel-track');
+const items = document.querySelectorAll('.carousel-item');
+const prevButton = document.querySelector('.carousel-prev');
+const nextButton = document.querySelector('.carousel-next');
+
+let currentIndex = 0;
+
+const updateCarousel = () => {
+    const itemWidth = items[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+};
+
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+    updateCarousel();
+});
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+    updateCarousel();
+});
+// Typing Animation
+const messages = [
+    "Elevating Legal Excellence",
+    "Bespoke Publications for Law Firms",
+    "Enhance Client Engagement Today"
+];
+
+let typingIndex = 0;
+let charIndex = 0;
+
+const typingEffect = document.getElementById('typing-effect');
+
+const typeMessage = () => {
+    const currentMessage = messages[typingIndex];
+    if (charIndex < currentMessage.length) {
+        typingEffect.textContent += currentMessage[charIndex];
+        charIndex++;
+        setTimeout(typeMessage, 100);
+    } else {
+        setTimeout(() => {
+            charIndex = 0;
+            typingEffect.textContent = '';
+            typingIndex = (typingIndex + 1) % messages.length;
+            typeMessage();
+        }, 2000);
+    }
+};
+
+typeMessage();
 
 

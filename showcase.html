@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase - Legal Publications</title>
+    <link rel="stylesheet" href="assets/styles/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="page-header">
+        <h1>Explore Our Bespoke Publications</h1>
+    </header>
+
+    <!-- Showcase Section -->
+    <section id="digital-bookshelf">
+        <div class="book-item card">
+            <div class="card-header">
+                <img src="assets/images/publication1-thumbnail.png" alt="Publication Thumbnail">
+            </div>
+            <div class="card-body">
+                <h3>Strohschein Law Group: Comprehensive Client Guide</h3>
+                <a href="javascript:void(0)" onclick="previewPublication('sample.pdf')">Click to Preview</a>
+            </div>
+        </div>
+        <div class="book-item">
+            <img src="assets/images/publication2-thumbnail.png" alt="Publication Thumbnail">
+            <h3>Harbor Wills & Trusts: Interactive Digital Guide</h3>
+            <a href="javascript:void(0)" onclick="previewPublication('harbor-guide.pdf')">Click to Preview</a>
+        </div>
+        <!-- Add more books here -->
+    </section>
+
+    <footer>
+        <button id="scrollToTop" style="display:none;">⬆ Back to Top</button>
+        <p>© 2024 Estate Partners Media. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Password-Protected Previews -->
+    <script>
+        function previewPublication(file) {
+            const password = prompt('Enter the password to preview this publication:');
+            if (password === 'correct-password') {
+                window.open(`assets/digital-publications/${file}`, '_blank');
+            } else {
+                alert('Incorrect password. Access denied.');
+            }
+        }
+    </script>
+</body>
+</html>

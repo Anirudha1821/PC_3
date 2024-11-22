@@ -1,0 +1,359 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(to bottom, #003366, #00509e);
+    color: #fff;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #003366;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Ticker Tape */
+#ticker-tape {
+    overflow: hidden;
+    background-color: #ddd;
+    padding: 1rem 0;
+}
+
+#ticker-tape .ticker {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    animation: scroll 10s linear infinite;
+}
+
+#ticker-tape .ticker img {
+    height: 50px;
+}
+
+/* Keyframe Animation for Ticker */
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Section Styles */
+section {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #003366;
+}
+
+section p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Teasers */
+#teasers {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.teaser {
+    flex: 1;
+    min-width: 250px;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.teaser h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.teaser a {
+    font-weight: bold;
+}
+
+/* Digital Bookshelf */
+#digital-bookshelf {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.book-item {
+    text-align: center;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-item img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.book-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Services Section */
+.service-item {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Case Studies */
+#case-studies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.case-study {
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.case-study video {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    #teasers {
+        flex-direction: column;
+    }
+}
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 1000;
+}
+
+#scrollToTop:hover {
+    background-color: #0056b3;
+}
+/* Sticky Navbar */
+#main-nav {
+    position: sticky;
+    top: 0;
+    background-color: #003366;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown Menu */
+#main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+}
+
+#main-nav ul li {
+    position: relative;
+    margin: 0 1rem;
+}
+
+#main-nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5rem;
+}
+
+#main-nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #00509e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0.5rem 0;
+}
+
+#main-nav ul li:hover .dropdown {
+    display: block;
+}
+
+#main-nav ul li .dropdown li a {
+    color: white;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+#main-nav ul li .dropdown li a:hover {
+    background-color: #007bff;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply to all sections */
+section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Smooth Hover Effects */
+.teaser, .service-item, .case-study, .book-item {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.teaser:hover, .service-item:hover, .case-study:hover, .book-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Card Design */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header img {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-body h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+

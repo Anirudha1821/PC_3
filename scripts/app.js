@@ -34,5 +34,18 @@ window.addEventListener('load', () => {
     const loadingScreen = document.getElementById('loading-screen');
     loadingScreen.style.display = 'none';
 });
+// Smooth Scrolling
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.querySelector(e.target.getAttribute('href'));
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+});
 
 

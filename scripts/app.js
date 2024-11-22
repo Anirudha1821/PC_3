@@ -29,11 +29,16 @@ elements.forEach((el) => observer.observe(el));
 document.querySelectorAll('.teaser, .service-item, .case-study, .book-item').forEach((item) => {
     item.classList.add('hidden');
 });
-// Loading Screen
 window.addEventListener('load', () => {
     const loadingScreen = document.getElementById('loading-screen');
-    loadingScreen.style.display = 'none';
+    if (loadingScreen) {
+        console.log("here.");
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 1000); // Ensures removal even if load is delayed
+    }
 });
+
 // Smooth Scrolling
 const navLinks = document.querySelectorAll('nav a');
 
@@ -98,5 +103,14 @@ const typeMessage = () => {
 };
 
 typeMessage();
+// Accordion Functionality
+const accordionToggles = document.querySelectorAll('.accordion-toggle');
+
+accordionToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+});
 
 

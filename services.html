@@ -10,26 +10,46 @@
 
 </head>
 <body>
-    <div id="loading-screen">
+    <!-- <div id="loading-screen">
         <div class="spinner"></div>
-    </div>
+    </div> -->
     
     <!-- Header -->
+    <nav id="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li>
+                <a href="#">Services</a>
+                <ul class="dropdown">
+                    <li><a href="services.html">Print Publications</a></li>
+                    <li><a href="services.html#digital">Digital Publications</a></li>
+                </ul>
+            </li>
+            <li><a href="showcase.html">Showcase</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+        </ul>
+    </nav>
     <header class="page-header">
         <h1>Tailored Marketing Solutions for Law Firms</h1>
     </header>
 
     <!-- Services Section -->
-    <section id="services">
-        <div class="service-item">
-            <h2>Print Publications</h2>
-            <p>Luxurious, perfect-bound guides for seminars, consultations, and marketing campaigns. Features include educational content, staff bios, QR codes, and awards.</p>
+    <div class="accordion">
+        <div class="accordion-item">
+            <button class="accordion-toggle">Print Publications</button>
+            <div class="accordion-content">
+                <p>Luxurious, perfect-bound guides for seminars, consultations, and marketing campaigns.</p>
+            </div>
         </div>
-        <div class="service-item">
-            <h2>Digital Publications</h2>
-            <p>Interactive publications designed for seamless client engagement. Features include QR codes for videos/webinars and links to digital forms.</p>
+        <div class="accordion-item">
+            <button class="accordion-toggle">Digital Publications</button>
+            <div class="accordion-content">
+                <p>Interactive publications designed for seamless client engagement.</p>
+            </div>
         </div>
-    </section>
+    </div>
+    
 
     <footer>
         <button id="scrollToTop" style="display:none;">⬆ Back to Top</button>

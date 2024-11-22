@@ -10,11 +10,26 @@
 
 </head>
 <body>
-    <div id="loading-screen">
+    <!-- <div id="loading-screen">
         <div class="spinner"></div>
-    </div>
+    </div> -->
     
     <!-- Header -->
+    <nav id="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li>
+                <a href="#">Services</a>
+                <ul class="dropdown">
+                    <li><a href="services.html">Print Publications</a></li>
+                    <li><a href="services.html#digital">Digital Publications</a></li>
+                </ul>
+            </li>
+            <li><a href="showcase.html">Showcase</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+        </ul>
+    </nav>
     <header class="page-header">
         <h1>Explore Our Bespoke Publications</h1>
     </header>
@@ -23,7 +38,7 @@
     <section id="digital-bookshelf">
         <div class="book-item card">
             <div class="card-header">
-                <img src="assets/images/publication1-thumbnail.png" alt="Publication Thumbnail">
+                <img src="assets/images/publication1-thumbnail.jpg" alt="Publication Thumbnail">
             </div>
             <div class="card-body">
                 <h3>Strohschein Law Group: Comprehensive Client Guide</h3>
@@ -31,7 +46,7 @@
             </div>
         </div>
         <div class="book-item">
-            <img src="assets/images/publication2-thumbnail.png" alt="Publication Thumbnail">
+            <img src="assets/images/publication1-thumbnail.jpg" alt="Publication Thumbnail">
             <h3>Harbor Wills & Trusts: Interactive Digital Guide</h3>
             <a href="javascript:void(0)" onclick="previewPublication('harbor-guide.pdf')">Click to Preview</a>
         </div>
@@ -47,7 +62,7 @@
     <script>
         function previewPublication(file) {
             const password = prompt('Enter the password to preview this publication:');
-            if (password === 'correct-password') {
+            if (password === 'admin') {
                 window.open(`assets/digital-publications/${file}`, '_blank');
             } else {
                 alert('Incorrect password. Access denied.');
